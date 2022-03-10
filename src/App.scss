@@ -54,9 +54,19 @@ input{
   justify-content: center;
   align-items: center;
 }
+.main{
+  padding-top: 80px;
+  width: 100%;
+  overflow: hidden;
+}
 .navbar{
   background-color: black;
   padding: 15px 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
   &__logo{
     height: auto;
     width: 120px;

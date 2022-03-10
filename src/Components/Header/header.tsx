@@ -38,7 +38,7 @@ const Header = () => {
                     title={<img src={logo} alt='' className='navbar__logo' />}
                     placement='left'
                     closeIcon={null}
-                    extra={<button className='btn navbar__drawer__button--close'><i className="far fa-times"></i></button>}
+                    extra={<button onClick={onClose} className='btn navbar__drawer__button--close'><i className="far fa-times"></i></button>}
                 >
                     <Search className='mb-2 navbar__drawer__search' />
                     <div className="navbar__link__container__drawer">
