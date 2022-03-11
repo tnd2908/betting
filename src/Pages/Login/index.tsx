@@ -8,12 +8,14 @@ const LoginPage = () => {
     return (
         <div className="flex-mid h-100vh w-100">
             <Row>
-                <Col xs={24} sm={24} style={{backgroundColor: '#fff'}} lg={12}>
-                    <CardForm/>
-                </Col>
-                <Col xs={24} sm={24} lg={12}>
-                    <LoginForm/>
-                </Col>
+                <div className="w-100 rounded d-flex flex-wrap">
+                    <Col xs={24} sm={24} style={{ backgroundColor: '#fff' }} lg={12}>
+                        <CardForm />
+                    </Col>
+                    <Col xs={24} sm={24} lg={12}>
+                        <LoginForm />
+                    </Col>
+                </div>
             </Row>
         </div>
     );

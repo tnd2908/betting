@@ -79,7 +79,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 450px;
+    max-width: 450px;
     overflow: hidden;
     &__title{
         font-weight: bold;
