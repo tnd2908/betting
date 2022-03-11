@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, Divider } from 'antd';
 import { Link } from 'react-router-dom';
-
 const LoginForm = () => {
     return (
         <Form
@@ -18,7 +17,7 @@ const LoginForm = () => {
                 name="username"
                 rules={[{ required: true, message: 'Please input your username!' }]}
             >
-                <Input size='large' placeholder='Input your email' />
+                <Input style={{backgroundColor: '#434343', border: 0}} size='large' placeholder='Input your email' />
             </Form.Item>
 
             <Form.Item
@@ -26,7 +25,7 @@ const LoginForm = () => {
                 name="password"
                 rules={[{ required: true, message: 'Please input your password!' }]}
             >
-                <Input.Password size='large' placeholder='Input your password' />
+                <Input.Password style={{backgroundColor: '#434343', border: 0}} size='large' placeholder='Input your password' />
             </Form.Item>
             <div className="d-flex justify-content-between">
                 <Link className='form__link--recovery' to='/recovery'>Forgot password?</Link>
@@ -36,7 +35,7 @@ const LoginForm = () => {
             </Form.Item>
            
             <Form.Item>
-                <Divider>
+                <Divider >
                     <h5 className='form__sub-title--login'>Or login with</h5>
                 </Divider>
                 <div className="d-flex justify-content-between">

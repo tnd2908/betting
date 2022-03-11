@@ -3,13 +3,17 @@
 }
 .form{
     width: 450px;
-    background-color: white;
+    background-color: black;
     padding: 25px 15px;
+    margin: 0 auto;
+    position: relative;
     &__title{
        font-weight: bold;
        position: relative;
        margin-bottom: 0;
+       color: white;
     }
+
     &__sub-title{
         color: silver;
         position: relative;
@@ -20,7 +24,7 @@
         }
     }
     &__item--title{
-        color: black;
+        color: #fafafa;
         font-size: 16px;
         margin-bottom: 0;
     }
@@ -34,7 +38,15 @@
     .ant-form-item{
         margin-bottom: 10px;
     }
-
+    .ant-input-affix-wrapper > input.ant-input{
+        background-color: #434343;
+    }
+    .ant-input{
+        color: white;
+    }
+    .ant-divider-horizontal.ant-divider-with-text::before, .ant-divider-horizontal.ant-divider-with-text::after{
+        border-top-color: silver;
+    }
     &__button{
         height: 40px;
         width: 48%;
@@ -44,7 +56,7 @@
         &--login{
             width: 100%;
             height: 40px;
-            background-color: black;
+            background-color: orange;
             border-radius: 4px;
         }
         &--facebook{
@@ -58,4 +70,30 @@
         }
     }
     
+}
+.card-form{
+    padding: 25px 15px;
+    padding-bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 450px;
+    overflow: hidden;
+    &__title{
+        font-weight: bold;
+        color: grey;
+        margin-bottom: 0px;
+    }
+    &__sub-title{
+        font-size: 1.4rem;
+    }
+    &__text{
+        color: black;
+    }
+    img{
+        height: auto;
+        transform: translateY(33px);
+    }
 }

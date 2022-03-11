@@ -24,6 +24,18 @@ body{
 }
 .h-100vh{
   min-height: 100vh;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: ellipse(70% 38% at 50% 100%);
+    background-color: #8d5858;
+    // background-color: #cf1322;
+    opacity: 0.6;
+    z-index: -2;
+  }
 }
 .d-flex{
   display: flex;
@@ -54,14 +66,23 @@ input{
   justify-content: center;
   align-items: center;
 }
+.flex-column{
+  flex-direction: column;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.w-100{
+  width: 100%;
+}
 .main{
-  padding-top: 80px;
+  padding-top: 70px;
   width: 100%;
   overflow: hidden;
 }
 .navbar{
   background-color: black;
-  padding: 15px 50px;
+  padding: 15px 80px;
   position: fixed;
   width: 100%;
   z-index: 99;
