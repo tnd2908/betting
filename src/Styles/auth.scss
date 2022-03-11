@@ -96,4 +96,11 @@
         height: auto;
         transform: translateY(33px);
     }
+    &__button{
+        border: 1px solid black;
+        height: 40px;
+        width: 160px;
+        background-color: white;
+        color: black;
+    }
 }

@@ -3,7 +3,6 @@ import React from 'react';
 import '../../Styles/auth.scss'
 import CardForm from './Components/CardForm';
 import LoginForm from './Components/LoginForm';
-import RegisterForm from './Components/RegisterForm';
 const LoginPage = () => {
     return (
         <div className="flex-mid h-100vh w-100">

@@ -14,7 +14,7 @@ const CardForm = () => {
                 <h4 className='card-form__sub-title'>You want to be rich?</h4>
                 <p className='card-form__text'>Sign up here</p> */}
 
-                <button>
+                <button className='card-form__button'>
                     Sign up
                 </button>
             </div>
