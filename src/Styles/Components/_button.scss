@@ -1,3 +1,14 @@
 .btn {
   border: 0;
 }
+button{
+  transition: 0.5s;
+  &:active{
+    animation: active 0.5s;
+  }
+}
+
+@keyframes active {
+  from { transform: scale(0.97);};
+  to {transform: scale(1);}
+}

@@ -14,13 +14,14 @@ const Header = () => {
     return (
         <div className="container navbar">
             <Row>
-                <Col md={8} sm={12} xs={24}>
-                    <div className="d-flex align-items-center h-100">
+                <Col md={24} lg={8} sm={24} xs={24}>
+                    <div className="d-flex align-items-center justify-content-between h-100">
                         <button onClick={toggleMenu} className='navbar__button--menu'> <i className="far fa-bars"></i> </button>
                         <img className='navbar__logo' src={logo} alt="" />
+                        <button onClick={toggleMenu} className='navbar__button--menu'> <i className="fas fa-user"></i> </button>
                     </div>
                 </Col>
-                <Col lg={8} md={12} sm={24} xs={24}>
+                <Col lg={8} md={24} sm={24} xs={24}>
                     <Search className='navbar__search'/>
                 </Col>
                 <Col md={8}>

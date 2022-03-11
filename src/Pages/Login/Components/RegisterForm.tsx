@@ -7,20 +7,19 @@ const RegisterForm = () => {
             name="basic"
             initialValues={{ remember: true }}
             autoComplete="off"
-            className='login-form form'
-            layout='vertical'
+            className='register-form'
         >
-            <h1 className='form__title'>Sign up new Account</h1>
-            <h3 className='form__sub-title'>Login to continue</h3>
+            <h1 className='register-form__title'>Sign up new Account</h1>
+            <h3 className='register-form__sub-title'>Login to continue</h3>
             <Form.Item
-                label={<h6 className='form__item--title'>Name</h6>}
+                label={<h6 className='register-form__item--title'>Name</h6>}
                 name="username"
                 rules={[{ required: true, message: 'Please input your username!' }]}
             >
                 <Input size='large' placeholder='Input your name' />
             </Form.Item>
             <Form.Item
-                label={<h6 className='form__item--title'>Email</h6>}
+                label={<h6 className='register-form__item--title'>Email</h6>}
                 name="email"
                 rules={[{ required: true, message: 'Please input your email!' }]}
             >
@@ -28,7 +27,7 @@ const RegisterForm = () => {
             </Form.Item>
 
             <Form.Item
-                label={<h6 className='form__item--title'>Password</h6>}
+                label={<h6 className='register-form__item--title'>Password</h6>}
                 name="password"
                 rules={[{ required: true, message: 'Please input your password!' }]}
             >
@@ -36,7 +35,7 @@ const RegisterForm = () => {
             </Form.Item>
             <Form.Item
                 name="confirm"
-                label="Confirm Password"
+                label="Confirm Pw"
                 dependencies={['password']}
                 hasFeedback
                 rules={[
@@ -57,7 +56,7 @@ const RegisterForm = () => {
                 <Input.Password placeholder='Confirm your password' size='large'/>
             </Form.Item>
             <Form.Item>
-                <button className="btn form__button--login">Sign in</button>
+                <button className="btn form__button--register">Sign up</button>
             </Form.Item>
         </Form>
     );
