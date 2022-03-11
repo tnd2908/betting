@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+  color: white;
+  font-family: "Poppins";
+}
+a {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: white;
+  margin-bottom: 0;
+}
+button {
+  cursor: pointer;
+}
+body {
+  background-color: #292929 !important;
+}
+
+input {
+  outline: none !important;
+}
