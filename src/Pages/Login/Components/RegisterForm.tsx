@@ -1,16 +1,25 @@
 import { Form, Input } from 'antd';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import Button from '../../../Components/Button/Button';
+import { userRegister } from '../../../Redux/Action/user';
+import { IRegisterField } from '../../../Utils/interface';
 
 const RegisterForm = () => {
+    const dispatch = useDispatch();
+    const onFinish = (data: IRegisterField) => {
+        dispatch(userRegister(data))
+    }
     return (
         <Form
             name="basic"
             initialValues={{ remember: true }}
             autoComplete="off"
-            className='register-form'
+            className='register-form form'
+            layout='vertical'
+            onFinish={onFinish}
         >
-            <h1 className='register-form__title'>Sign up new Account</h1>
-            <h3 className='register-form__sub-title'>Login to continue</h3>
+
             <Form.Item
                 label={<h6 className='register-form__item--title'>Name</h6>}
                 name="username"
@@ -56,7 +65,7 @@ const RegisterForm = () => {
                 <Input.Password placeholder='Confirm your password' size='large'/>
             </Form.Item>
             <Form.Item>
-                <button className="btn form__button--register">Sign up</button>
+                <Button htmlType='submit' className='form__button--register'>Sign up</Button>
             </Form.Item>
         </Form>
     );

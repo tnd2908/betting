@@ -1,3 +1,4 @@
+//Initial import
 @import "./Styles/Abstracts/functions";
 @import "./Styles/Abstracts/mixin";
 @import "./Styles/Abstracts/variable";
@@ -6,5 +7,7 @@
 @import "./Styles/Components/button";
 @import "./Styles/Components/text";
 @import "./Styles/Components/common";
+
+//Page Style
 @import "./Pages/Home/home.scss";
-@import "./Pages/Login/auth.scss";
+@import "./Pages/Login/style.scss";

@@ -2,9 +2,20 @@ export interface IAction {
     type: string,
     payload: any
 }
-export interface IUser{
+export interface IUserReducer{
     email: string,
     username: string,
     userId: string,
-    avatar?: string
+    avatar?: string,
+    isLoading: boolean,
+    error?: string
+}
+export interface ILoginField{
+    email: string,
+    password: string
+}
+export interface IRegisterField{
+    name: string,
+    email: string,
+    password: string
 }

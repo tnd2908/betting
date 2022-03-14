@@ -2,8 +2,18 @@ import React from 'react';
 import { Form, Input, Divider } from 'antd';
 import { Link } from 'react-router-dom';
 import {MailOutlined, LockOutlined} from '@ant-design/icons';
+import { ILoginField } from '../../../Utils/interface';
+import { useDispatch, useSelector } from 'react-redux';
+import { userLogin } from '../../../Redux/Action/user';
+import Button from '../../../Components/Button/Button';
+import { State } from '../../../Redux/Reducer';
 
 const LoginForm = () => {
+    const dispatch = useDispatch();
+    const isLoading = useSelector((state: State) => state.user.isLoading)
+    const onFinish = (data : ILoginField) =>{
+        dispatch(userLogin(data))
+    }
     return (
         <Form
             name="basic"
@@ -11,6 +21,7 @@ const LoginForm = () => {
             autoComplete="off"
             className='login-form form'
             layout='vertical'
+            onFinish={onFinish}
         >
             <h1 className='form__title'>Welcome Back!</h1>
             <h3 className='form__sub-title'>Login to continue</h3>
@@ -39,7 +50,7 @@ const LoginForm = () => {
                 <Link className='form__link--recovery' to='/recovery'>Forgot password?</Link>
             </div>
             <Form.Item>
-                <button className="btn form__button--login">Sign in</button>
+                <Button isLoading={isLoading} className='form__button--login' htmlType='submit'>Sign in</Button>
             </Form.Item>
 
             <Form.Item>

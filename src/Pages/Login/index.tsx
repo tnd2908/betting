@@ -1,7 +1,6 @@
 import { Col, Row } from 'antd';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './auth.scss'
 import CardForm from './Components/CardForm';
 import LoginForm from './Components/LoginForm';
 import RegisterForm from './Components/RegisterForm';
