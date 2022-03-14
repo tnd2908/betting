@@ -1,7 +1,6 @@
 import { Col, Row } from 'antd';
 import React from 'react';
 import bg from '../../Assets/Images/background.png'
-import '../../Styles/home.scss'
 const Home = () => {
     return (
         <div className="main">

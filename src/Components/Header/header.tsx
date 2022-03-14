@@ -2,7 +2,7 @@ import { Col, Drawer, Row } from 'antd';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/Images/OSD-Logo1-Red.png'
-import Search from '../Search';
+import Search from '../Search/Search';
 const Header = () => {
     const [isVisible, setIsVisible] = useState(false)
     const toggleMenu = () => {

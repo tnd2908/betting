@@ -1,4 +1,4 @@
-@import './Abstracts/mixin';
+@import '../../Styles/Abstracts/mixin';
 .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
     display: none;
 }
@@ -8,6 +8,10 @@
     padding: 25px 25px;
     margin: 0 auto;
     position: relative;
+    &__container{
+        border-radius: 12px;
+        overflow: hidden;
+    }
     &__title{
        font-weight: bold;
        position: relative;
@@ -78,10 +82,13 @@
     
 }
 .login-form{
+    transition: 0.5s;
+    animation: toRight 0.5s;
     .ant-input-affix-wrapper > input.ant-input{
         background-color: #434343;
     }
 }
+
 .card-form{
     padding: 25px 15px;
     padding-bottom: 0;
@@ -91,8 +98,11 @@
     justify-content: space-between;
     height: 100%;
     max-width: 450px;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
+    transition: 0.5s;
+    animation: toLeft 0.5s;
     &__title{
         font-weight: bold;
         color: grey;
@@ -108,9 +118,7 @@
         height: auto;
         transform: translateY(33px);
     }
-    &__image-bottom{
-        display: none;
-    }
+
     &__image--top{
         height: 50px;
         margin: 0 24px;
@@ -129,8 +137,11 @@
 .register-form{
     padding: 25px 15px;
     margin: 0 auto;
+    padding-bottom: 0;
     width: 450px;
     background-color: #fff;
+    transition: 0.5s;
+    animation: toLeft 0.5s;
     &__title{
         font-weight: bold;
         position: relative;
@@ -153,10 +164,26 @@
      }
 }
 @include tablet{
+    .login-form{
+        order: 1;
+    }
+    .form__container{
+        flex-wrap: wrap;
+        padding-top: 140px;
+    }
     .card-form{
+        order: 2;
         padding-bottom: 25px;
         &__image--bottom{
             display: none;
         }
     }
+}
+@keyframes toLeft{
+    from {transform: translateX(100%)}
+    to {transform: translateX(0)}
+}
+@keyframes toRight{
+    from {transform: translateX(-100%)}
+    to {transform: translateX(0)}
 }

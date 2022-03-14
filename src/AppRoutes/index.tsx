@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../../Pages/Home';
-import LoginPage from '../../Pages/Login';
-import Layout from '../layout';
+import Home from '../Pages/Home';
+import LoginPage from '../Pages/Login';
+import Layout from '../Components/Layout/layout';
 
 const AppRoutes = () => {
     return (
