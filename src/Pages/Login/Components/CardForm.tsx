@@ -12,7 +12,7 @@ const CardForm = ({to}:Props) => {
         navigate(to)
     }
     return (
-        <div className='card-form'>
+        <div className='card-form' >
             <div>
                 <img className='card-form__image--top' src={bgtop} alt="" />
                 <PageHeader
@@ -20,10 +20,6 @@ const CardForm = ({to}:Props) => {
                     title="Chance to be rich"
                     subTitle="Sign up here"
                 />
-                {/* <h1 className='card-form__title'>Chance to be rich</h1>
-                <h4 className='card-form__sub-title'>You want to be rich?</h4>
-                <p className='card-form__text'>Sign up here</p> */}
-
                 <button onClick={handleUrlChange} className='card-form__button'>
                     Sign up
                 </button>

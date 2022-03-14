@@ -10,7 +10,7 @@ const LoginPage = () => {
         <div className="flex-mid h-100vh w-100">
             <Row>
                 <Col lg={24}>
-                <div className="d-flex form__container">
+                    <div className="d-flex form__container">
                         {pathname.startsWith('/login') && <CardForm to='/signup' />}
                         {pathname.startsWith('/signup') && <RegisterForm />}
                         {pathname.startsWith('/login') && <LoginForm />}

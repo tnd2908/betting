@@ -1,4 +1,4 @@
-import { Form, Input } from 'antd';
+import { Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '../../../Components/Button/Button';
@@ -63,6 +63,12 @@ const RegisterForm = () => {
                 ]}
             >
                 <Input.Password placeholder='Confirm your password' size='large'/>
+            </Form.Item>
+            <Form.Item 
+                name='check'
+                rules={[{ required: true, message: 'Please agree with the term' }]}
+            >
+                <Checkbox><span className="text-dark">I agree with the term and condition</span></Checkbox>
             </Form.Item>
             <Form.Item>
                 <Button htmlType='submit' className='form__button--register'>Sign up</Button>

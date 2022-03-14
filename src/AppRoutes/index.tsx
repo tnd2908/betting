@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import LoginPage from "../Pages/Login";
 import MatchBetPage from "../Pages/MatchBet";
 import MatchesPage from "../Pages/Matches";
+import UserPage from "../Pages/User";
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
           <Route path="" element={<MatchesPage />} />
           <Route path=":idMatch" element={<MatchBetPage />} />
         </Route>
+        <Route path="/user" element={<UserPage/>}></Route>
       </Route>
     </Routes>
   );

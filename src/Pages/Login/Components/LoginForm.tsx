@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input, Divider } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, NavigateFunction, useNavigate } from 'react-router-dom';
 import {MailOutlined, LockOutlined} from '@ant-design/icons';
 import { ILoginField } from '../../../Utils/interface';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,9 +10,10 @@ import { State } from '../../../Redux/Reducer';
 
 const LoginForm = () => {
     const dispatch = useDispatch();
-    const isLoading = useSelector((state: State) => state.user.isLoading)
+    const isLoading = useSelector((state: State) => state.user.isLoading);
+    const navigate : NavigateFunction = useNavigate()
     const onFinish = (data : ILoginField) =>{
-        dispatch(userLogin(data))
+        dispatch(userLogin(data, navigate))
     }
     return (
         <Form

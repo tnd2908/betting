@@ -1,5 +1,8 @@
 .text {
-  &--white {
+  &-white {
     color: #fff;
+  }
+  &-dark{
+    color: black;
   }
 }

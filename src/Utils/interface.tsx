@@ -3,12 +3,14 @@ export interface IAction {
     payload: any
 }
 export interface IUserReducer{
-    email: string,
-    username: string,
-    userId: string,
-    avatar?: string,
+    userInfor: {
+        email: string,
+        username: string,
+        userId: string,
+        avatar?: string,
+    },
     isLoading: boolean,
-    error?: string
+    error?: string,
 }
 export interface ILoginField{
     email: string,

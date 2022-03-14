@@ -2,10 +2,12 @@ import { USER_ACTION } from "../../Utils/constant"
 import { IAction, IUserReducer } from "../../Utils/interface"
 
 const initialState : IUserReducer = {
-    username: '',
-    email: '',
-    userId: '',
-    avatar: '',
+    userInfor: {
+        username: '',
+        email: '',
+        userId: '',
+        avatar: '',
+    },
     isLoading: false,
     error: '',
 }
