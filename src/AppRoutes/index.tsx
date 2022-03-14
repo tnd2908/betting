@@ -1,8 +1,10 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
+import Layout from '../Components/Layout/layout';
 import Home from '../Pages/Home';
 import LoginPage from '../Pages/Login';
-import Layout from '../Components/Layout/layout';
+import MatchesPage from '../Pages/Matches';
+
 
 const AppRoutes = () => {
     return (
@@ -11,6 +13,10 @@ const AppRoutes = () => {
 				<Route element={<Home/>} path='/'></Route>
                 <Route path='/login' element={<LoginPage/>}></Route>
                 <Route path='/signup' element={<LoginPage/>}></Route>
+                <Route path="/matches" element={<Outlet />}>
+                    <Route path='' element={<MatchesPage />} />
+                    {/* <Route path=':idMatch' element={<BetPage />} /> */}
+                </Route>
 			</Route>
 		</Routes>
     );
