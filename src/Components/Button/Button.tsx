@@ -9,7 +9,7 @@ type ButtonProps = {
     children: any,
     onClick?: () => void
 }
-const Button = ({type, htmlType, isLoading, isDisable, className, children} : ButtonProps) => {
+const Button = ({type, htmlType, isLoading, isDisable, className, children, onClick} : ButtonProps) => {
     const checkDisable = () =>{
         if(isDisable === true){
             return isDisable;
@@ -23,19 +23,12 @@ const Button = ({type, htmlType, isLoading, isDisable, className, children} : Bu
             }
         }
     }
-    const getClassName = () =>{
-        switch(type){
-            case 'primary': {
-                return `primary ${className ? className : ''}`
-            }
-            default: return `primary ${className ? className : ''}`
-        }
-    }
     return (
         <button 
             type={htmlType} 
-            className={`btn ${getClassName()}`}
+            className={`btn ${type} ${className ? className : ''}`}
             disabled={checkDisable()}
+            onClick={onClick}
          >
              {isLoading 
                 ? <LoadingOutlined className='btn__loading-icon'/> 

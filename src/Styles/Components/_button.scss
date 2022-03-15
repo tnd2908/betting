@@ -10,7 +10,17 @@
     font-size: 25px;
   }
   &.primary{
-    background-color: red;
+    background-color: $primary;
+  }
+  &.primary-light{
+    background-color: $primary-light;
+  }
+  &.dark{
+    background-color: $dark;
+  }
+  &.light{
+    background-color: $light;
+    color: black;
   }
 }
 button{

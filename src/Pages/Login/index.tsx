@@ -1,7 +1,8 @@
 import { Col, Row } from 'antd';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import CardForm from './Components/CardForm';
+import CardFormLeft from './Components/CardFormLeft';
+import CardFormRight from './Components/CardFormRight';
 import LoginForm from './Components/LoginForm';
 import RegisterForm from './Components/RegisterForm';
 const LoginPage = () => {
@@ -11,10 +12,10 @@ const LoginPage = () => {
             <Row>
                 <Col lg={24}>
                     <div className="d-flex form__container">
-                        {pathname.startsWith('/login') && <CardForm to='/signup' />}
+                        {pathname.startsWith('/login') && <CardFormLeft />}
                         {pathname.startsWith('/signup') && <RegisterForm />}
                         {pathname.startsWith('/login') && <LoginForm />}
-                        {pathname.startsWith('/signup') && <CardForm to='/login' />}
+                        {pathname.startsWith('/signup') && <CardFormRight />}
                     </div>
 
                 </Col>
