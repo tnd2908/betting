@@ -23,10 +23,18 @@ const Button = ({type, htmlType, isLoading, isDisable, className, children} : Bu
             }
         }
     }
+    const getClassName = () =>{
+        switch(type){
+            case 'primary': {
+                return `primary ${className ? className : ''}`
+            }
+            default: return `primary ${className ? className : ''}`
+        }
+    }
     return (
         <button 
             type={htmlType} 
-            className={`btn ${className}`}
+            className={`btn ${getClassName()}`}
             disabled={checkDisable()}
          >
              {isLoading 

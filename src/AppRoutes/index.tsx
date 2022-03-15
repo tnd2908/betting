@@ -6,6 +6,7 @@ import LoginPage from "../Pages/Login";
 import MatchBetPage from "../Pages/MatchBet";
 import MatchesPage from "../Pages/Matches";
 import UserPage from "../Pages/User";
+import ChangeInforForm from "../Pages/User/Component/ChangeInforForm";
 
 const AppRoutes = () => {
   return (
@@ -18,7 +19,9 @@ const AppRoutes = () => {
           <Route path="" element={<MatchesPage />} />
           <Route path=":idMatch" element={<MatchBetPage />} />
         </Route>
-        <Route path="/user" element={<UserPage/>}></Route>
+        <Route path="/user" element={<UserPage/>}>
+          <Route path="" element={<ChangeInforForm/>}></Route>
+        </Route>
       </Route>
     </Routes>
   );

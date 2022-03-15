@@ -1,8 +1,9 @@
-import { all, fork } from 'redux-saga/effects';
+import { all } from 'redux-saga/effects';
 import { authSaga } from './user';
 
-const appSaga = [fork(authSaga)]
+// const appSaga = [fork(authSaga)]
+
 function *rootSaga(){
-    yield(all([...appSaga]))
+    yield(all([authSaga()]))
 }
 export default rootSaga
