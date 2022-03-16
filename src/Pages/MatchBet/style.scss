@@ -1,0 +1,901 @@
+.match-bet-page-content {
+  padding: 20px;
+  padding-top: 90px;
+  &__match {
+    padding-bottom: 20px;
+    &--name {
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+      margin: 0px;
+    }
+    &--time {
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+      margin: 0px;
+    }
+  }
+}
+
+.match-bet {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  &__container {
+    display: flex;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 8px rgba(17, 17, 17, 0.5);
+    border-radius: 20px;
+  }
+  &__league {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 70%;
+    z-index: 3;
+    padding: 8px 16px;
+    border-radius: 0 0 15px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ddd;
+    &--icon {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      position: relative;
+      display: block;
+      img {
+        height: 100%;
+        width: auto;
+        opacity: 0.7;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.match-bet-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 700px;
+  flex: 1 1 348px;
+  background-image: linear-gradient(180deg, #7d984f, #244455);
+  border-radius: 20px;
+  &__header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    max-width: 850px;
+    &--main {
+      margin: 70px 0 5px 0;
+      justify-content: space-between;
+      &__score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 6rem;
+        width: 100px;
+        height: 100px;
+        padding-top: 5px;
+      }
+      &__countdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Chivo, system-ui, BlinkMacSystemFont, -apple-system,
+          Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-style: italic;
+        &--title {
+          font-size: 1.75rem;
+          text-transform: uppercase;
+          line-height: 1;
+          color: rgba(255, 255, 255, 1);
+        }
+        &--time {
+          font-size: 2.25rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 1;
+          margin-top: 10px;
+        }
+      }
+    }
+    &--sub {
+      margin: 20px 0 50px 0;
+      justify-content: center;
+      &__score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: #c95a64;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        span {
+          color: black;
+        }
+      }
+      &__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0 45px;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(#c95a64, 1);
+        span {
+          color: black;
+        }
+      }
+    }
+  }
+  &__bet-line {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -25px;
+  }
+  &__bet-line-break {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-end;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    justify-content: space-evenly;
+    margin-top: 50px;
+    &__item {
+      display: flex;
+      flex: 1 1 33%;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      .team-choose__flex-container--home {
+        &:hover {
+          background: #ff4747;
+          filter: drop-shadow(0 0 30px #ff4747);
+          span {
+            color: black;
+          }
+        }
+      }
+      .team-choose__flex-container--draw {
+        &:hover {
+          background: #313131;
+          filter: drop-shadow(0 0 30px #c5c5c5);
+          span {
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+      .team-choose__flex-container--away {
+        &:hover {
+          background: #4f7aed;
+          filter: drop-shadow(0 0 30px #4f7aed);
+          span {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  &__footer {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 1250px;
+    margin: 50px 0 0;
+  }
+  &__winning-rate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    justify-content: center;
+    &__progress-bar {
+      position: relative;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+      flex: 0 0 666px;
+      background-color: rgba(21, 139, 227, 1);
+      height: 12px;
+      border-radius: 8px;
+      &--value {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(255, 71, 71, 1);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        &::after {
+          position: absolute;
+          background-color: rgba(255, 255, 255, 1);
+          content: "";
+          height: 16px;
+          width: 2px;
+          top: 50%;
+          right: 0;
+          transform: translate(50%, -50%);
+          box-shadow: 0 0 4px 0 #fff;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  &__bet-action {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 5px 0;
+    &__amount {
+      width: 200px;
+      height: 80px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 35px;
+        font-family: Chivo, system-ui, BlinkMacSystemFont, -apple-system,
+          Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+    }
+  }
+}
+
+.bet-team {
+  display: flex;
+  align-items: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  flex: 1 1 50%;
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  max-height: 200px;
+  min-height: 200px;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0.3s;
+  justify-content: flex-end;
+  cursor: pointer;
+  &__people {
+    position: absolute;
+    top: 0;
+    margin-top: -22px;
+    z-index: 10;
+    color: black;
+    &--home {
+      left: 45%;
+    }
+    &--away {
+      right: 45%;
+    }
+    &--button {
+      background: rgb(255, 255, 255);
+      width: 60px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      transition: all 0.5s;
+      span {
+        padding: 3px;
+      }
+      &__number {
+        padding-top: 6px !important;
+      }
+      &--home {
+        border: 1px solid #cb3333;
+        span {
+          color: #cb3333;
+        }
+        &:hover {
+          background: #e09c9c;
+        }
+      }
+      &--away {
+        border: 1px solid #4f7aed;
+        span {
+          color: #4f7aed;
+        }
+        &:hover {
+          background: #7d97df;
+        }
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: stretch;
+    padding: 0;
+    max-width: 500px;
+    &--away {
+      flex-direction: row-reverse;
+    }
+  }
+  &--home {
+    border-left: none !important;
+    border: 2px solid #ff4747;
+    filter: drop-shadow(0 0 15px #ff4747);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    &::after {
+      position: absolute;
+      display: block;
+      height: 0;
+      width: 0;
+      border-radius: 4px;
+      content: "";
+      top: 0;
+      border-style: solid;
+      left: calc(100% - 1px);
+      border-color: transparent transparent transparent #fff;
+      filter: drop-shadow(2px 0 0 #ff4747);
+      border-width: 98px 0 98px 40px;
+    }
+    &:hover {
+      filter: drop-shadow(0 0 70px #ff4747);
+    }
+  }
+  &--away {
+    border-right: none !important;
+    border: 2px solid #4f7aed;
+    filter: drop-shadow(0 0 15px #4f7aed);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    &::after {
+      position: absolute;
+      display: block;
+      height: 0;
+      width: 0;
+      border-radius: 4px;
+      content: "";
+      top: 0;
+      border-style: solid;
+      right: calc(100% - 1px);
+      border-color: transparent #fff transparent transparent;
+      filter: drop-shadow(-2px 0 0 #4f7aed);
+      border-width: 98px 40px 98px 0;
+    }
+    &:hover {
+      filter: drop-shadow(0 0 70px #4f7aed);
+    }
+  }
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 auto;
+  max-width: 60%;
+  &__logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 120px;
+      height: 120px;
+    }
+    &--away {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.team-choose {
+  &__container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    max-width: max-content;
+    justify-content: flex-end;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: rgba(242, 242, 242, 1);
+    width: 95px;
+    height: 46px;
+    transition: all 0.3s;
+    span {
+      font-weight: 500;
+      font-size: 1rem;
+      color: rgba(21, 67, 91, 1);
+    }
+    &--home {
+      border: 1px solid rgba(255, 71, 71, 1);
+    }
+    &--draw {
+      border: 1px solid #313131;
+    }
+    &--away {
+      border: 1px solid #4f7aed;
+    }
+  }
+  &--home {
+    flex-direction: row-reverse;
+  }
+}
+
+.draw {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 100%, 0.25);
+  min-width: 250px;
+  height: 140px;
+  flex: 1 0 190px;
+  &__bet {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    min-width: 95px;
+    height: 115px;
+    margin: 0 50px;
+    &--label {
+      position: absolute;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      top: 10px;
+    }
+    &--container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      border-width: 1px;
+      border-color: rgba(255, 255, 255, 1);
+      background-color: transparent;
+      &:hover {
+        filter: drop-shadow(0 0 40px #3a3a3a);
+      }
+    }
+  }
+}
+
+.bet-active {
+  .team-choose__flex-container--home {
+    background: #ff4747;
+    span {
+      color: black;
+    }
+  }
+  .team-choose__flex-container--draw {
+    background: #313131;
+    span {
+      color: rgb(255, 255, 255);
+    }
+  }
+  .team-choose__flex-container--away {
+    background: #4f7aed;
+    span {
+      color: black;
+    }
+  }
+}
+
+@include desktop-mini {
+  .team-container {
+    &__logo {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .match-bet-page-content {
+    padding-top: 130px;
+  }
+  .match-bet-content {
+    height: 640px;
+    &__header {
+      max-width: 750px;
+      &--main {
+        justify-content: space-around;
+        &__score {
+          font-size: 5rem;
+          width: 90px;
+          height: 90px;
+        }
+        &__countdown {
+          &--title {
+            font-size: 1.5rem;
+          }
+          &--time {
+            font-size: 1.75rem;
+          }
+        }
+      }
+      &--sub {
+        margin: 10px 0 50px 0;
+        &__score {
+          width: 40px;
+          height: 40px;
+          font-size: 1.75rem;
+          padding-top: 5px;
+        }
+        &__title {
+          font-size: 1.5rem;
+          margin: 0 35px;
+        }
+      }
+    }
+    &__winning-rate {
+      &__progress-bar {
+        flex: 0 0 500px;
+        height: 10px;
+      }
+    }
+    &__bet-action {
+      &__amount {
+        width: 150px;
+        height: 60px;
+        border-radius: 10px;
+        span {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .bet-team {
+    max-height: 180px;
+    min-height: 180px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &__people {
+      &--button {
+        width: 50px;
+        height: 35px;
+        span {
+          padding: 2px;
+        }
+      }
+    }
+    &--home {
+      &::after {
+        border-width: 88px 0 88px 40px;
+      }
+    }
+    &--away {
+      &::after {
+        border-width: 88px 40px 88px 0;
+      }
+    }
+  }
+  .team-container {
+    &__logo {
+      flex-direction: column;
+      img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+  .draw {
+    min-width: 225px;
+    height: 130px;
+    flex: 1 0 150px;
+  }
+  .team-choose {
+    &__flex-container {
+      width: 80px;
+      height: 40px;
+    }
+  }
+}
+
+@include tablet-mini {
+  .match-bet-page-content {
+    &__match {
+      &--name {
+        font-size: 1.5rem;
+      }
+      &--time {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .match-bet {
+    &__league {
+      font-size: 14px;
+      max-width: 65%;
+      min-width: 65%;
+      i {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .match-bet-content {
+    height: 660px;
+    &__header {
+      max-width: 600px;
+      &--main {
+        &__score {
+          font-size: 4rem;
+          width: 70px;
+          height: 70px;
+        }
+        &__countdown {
+          &--title {
+            font-size: 1.2rem;
+          }
+          &--time {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      &--sub {
+        &__score {
+          width: 30px;
+          height: 30px;
+          font-size: 1.5rem;
+          padding-top: 2px;
+          border-radius: 5px;
+        }
+        &__title {
+          padding: 5px;
+          border-radius: 5px;
+          span {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+    &__winning-rate {
+      &__progress-bar {
+        flex: 0 0 400px;
+        height: 10px;
+      }
+    }
+    &__bet-action {
+      &__amount {
+        width: 130px;
+        height: 50px;
+        border-radius: 7px;
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .bet-team {
+    max-height: 165px;
+    min-height: 165px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &__container {
+      justify-content: center;
+    }
+    &__people {
+      &--button {
+        width: 40px;
+        height: 30px;
+        font-size: 1rem;
+        span {
+          padding: 1px;
+        }
+      }
+      &--home {
+        left: 40%;
+      }
+      &--away {
+        right: 40%;
+      }
+    }
+    &--home {
+      &::after {
+        border-width: 80px 0 80px 40px;
+      }
+    }
+    &--away {
+      &::after {
+        border-width: 80px 40px 80px 0;
+      }
+    }
+  }
+  .draw {
+    min-width: 150px;
+    height: 125px;
+    flex: 1 0 150px;
+  }
+}
+
+@include mobile {
+  .match-bet-page-content {
+    &__match {
+      &--name {
+        font-size: 1rem;
+      }
+      &--time {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .match-bet {
+    &__league {
+      font-size: 12px;
+      max-width: 75%;
+      min-width: 75%;
+    }
+  }
+  .match-bet-content {
+    height: 500px;
+    &__header {
+      max-width: 300px;
+      &--main {
+        &__score {
+          font-size: 3rem;
+          width: 60px;
+          height: 60px;
+          padding-top: 0px;
+        }
+        &__countdown {
+          &--title {
+            font-size: 0.8rem;
+          }
+          &--time {
+            font-size: 1rem;
+          }
+        }
+      }
+      &--sub {
+        &__score {
+          width: 25px;
+          height: 25px;
+          font-size: 1.2rem;
+          border-radius: 4px;
+        }
+        &__title {
+          padding: 2px;
+          padding-bottom: 5px;
+          border-radius: 5px;
+          margin: 0 20px;
+          span {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    &__winning-rate {
+      &__progress-bar {
+        flex: 0 0 200px;
+        height: 8px;
+      }
+    }
+    &__bet-line-break {
+      margin-top: 30px;
+      &__item {
+      }
+    }
+    &__bet-action {
+      margin: 20px 0 5px 0;
+      &__amount {
+        width: 120px;
+        height: 40px;
+        border-radius: 7px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    &__footer {
+      margin: 30px 0 0;
+    }
+  }
+  .team-container {
+    &__logo {
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  .bet-team {
+    max-height: 100px;
+    min-height: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &__container {
+      justify-content: center;
+    }
+    &__people {
+      margin-top: -12px;
+      &--button {
+        width: 30px;
+        height: 20px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        span {
+          padding: 1px;
+        }
+        &__number {
+          padding-top: 3px !important;
+        }
+      }
+      &--home {
+        left: 40%;
+      }
+      &--away {
+        right: 40%;
+      }
+    }
+    &--home {
+      &::after {
+        border-width: 48px 0 48px 40px;
+        left: calc(100% - 2px);
+      }
+    }
+    &--away {
+      &::after {
+        border-width: 48px 40px 48px 0;
+        right: calc(100% - 2px);
+      }
+    }
+  }
+  .draw {
+    min-width: 100px;
+    height: 75px;
+    flex: 1 0 100px;
+  }
+  .team-choose {
+    &__flex-container {
+      width: 60px;
+      height: 30px;
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
