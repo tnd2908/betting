@@ -16,6 +16,7 @@
     height: auto;
     width: 120px;
   }
+ 
   &__button--menu {
     background-color: black;
     border-style: none;
@@ -28,6 +29,10 @@
     margin: 0 15px;
     font-size: 17px;
     text-transform: uppercase;
+    &__avatar{
+      margin-left: 15px;
+      cursor: pointer;
+    }
     &:hover {
       color: silver;
     }
@@ -51,6 +56,18 @@
       text-align: center;
       &:hover {
         color: white;
+      }
+    }
+  }
+  &__dropdown{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    padding: 15px;
+    .navbar__link{
+      margin-bottom: 20px;
+      text-transform: unset;
+      &:first-child{
+        padding-top: 20px;
       }
     }
   }

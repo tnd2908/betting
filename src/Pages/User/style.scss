@@ -30,8 +30,9 @@
         }
         &__name{
             text-align: center;
-            margin-bottom: 60px;
-            font-size: 1.1rem;
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+            font-family: sans-serif;
         }
         &__avatar{
             width: 120px;
@@ -64,8 +65,35 @@
         margin-left: 20px;
     }
 }
+.ant-divider{
+    border-top: 1px solid silver;
+}
+.ant-upload.ant-upload-select-picture-card{
+    height: 300px;
+    width: 300px;
+    background-color: #434343;
+}
+.ant-upload-list-picture-card-container{
+    height: 300px;
+    width: 300px;
+}
+.form{
+    &--avatar{
+        width: 80%;
+    }
+    &__button--avatar{
+        width: 300px;
+    }
+}
 @include tablet{
-    .user__outlet__containe{
-        margin-left: 0;
+    .user__container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form{
+        &--avatar{
+            width: 100%;
+        }
+
     }
 }

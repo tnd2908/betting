@@ -17,7 +17,6 @@ const Home = () => {
                     </div>
                 </Col>
                 <Col md={12} style={{ backgroundColor: '#222020' }}>
-                    <img src={bg} alt="" />
                 </Col>
 
             </Row>

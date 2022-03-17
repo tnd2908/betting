@@ -7,7 +7,7 @@ const UserPage = () => {
         <div className='main user__container'>
             <div className="d-flex justify-content-between">
                 <Menu/>
-                <div className="user__outlet__container">
+                <div className="user__outlet__container flex-mid">
                     <Outlet/>
                 </div>
             </div>

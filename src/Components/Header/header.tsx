@@ -1,8 +1,18 @@
-import { Col, Drawer, Row } from 'antd';
+import { Avatar, Col, Drawer, Dropdown, Row } from 'antd';
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/Images/OSD-Logo1-Red.png'
+import { State } from '../../Redux/Reducer';
 import Search from '../Search/Search';
+const DropdownMenu = () => {
+    return (
+        <>
+            <Link to='/user' className='navbar__link'><i className="fal fa-cog left-icon"></i>Information</Link>
+            <Link to='/' className='navbar__link'><i className="fal fa-sign-out left-icon"></i>Log out</Link>
+        </>
+    );
+}
 const Header = () => {
     const [isVisible, setIsVisible] = useState(false)
     const toggleMenu = () => {
@@ -11,6 +21,7 @@ const Header = () => {
     const onClose = () => {
         setIsVisible(false)
     }
+    const user = useSelector((state: State) => state.user.userInfo)
     return (
         <div className="container navbar">
             <Row>
@@ -22,14 +33,19 @@ const Header = () => {
                     </div>
                 </Col>
                 <Col lg={8} md={24} sm={24} xs={24}>
-                    <Search className='navbar__search'/>
+                    <Search className='navbar__search' />
                 </Col>
                 <Col md={8}>
                     <div className="navbar__link__container">
                         <Link to='/' className='navbar__link'>Rules</Link>
                         <Link to='/' className='navbar__link'>Bet</Link>
                         <Link to='/' className='navbar__link'>History</Link>
-                        <Link to='/login' className='navbar__link--login'>Login</Link>
+                        {user.userId
+                            ?<Dropdown overlay={<DropdownMenu/>} placement='bottomRight' overlayClassName='navbar__dropdown'>
+                                <Avatar src={user.avatar} className='navbar__link__avatar' />
+                            </Dropdown>
+                            : <Link to='/login' className='navbar__link--login'>Login</Link>
+                        }
                     </div>
                 </Col>
                 <Drawer

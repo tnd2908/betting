@@ -2,7 +2,7 @@ import { USER_ACTION } from "../../Utils/constant"
 import { IAction, IUserReducer } from "../../Utils/interface"
 
 const initialState : IUserReducer = {
-    userInfor: {
+    userInfo: {
         username: '',
         email: '',
         userId: '',
@@ -18,6 +18,16 @@ const userReducer = (state = initialState, action: IAction) =>{
         }
         case USER_ACTION.LOGIN_SUCCESS:{
             return {...state, isLoading: false}
+        }
+        case USER_ACTION.LOGIN_GOOGLE_SUCCESS:{
+            const information = action.payload;
+            console.log(information)
+            return {...state, userInfo: {...information}}
+        }
+        case USER_ACTION.LOGIN_FACEBOOK_SUCCESS:{
+            const information = action.payload;
+            console.log(information)
+            return {...state, userInfo: {...information}}
         }
         default: 
             return {...state}

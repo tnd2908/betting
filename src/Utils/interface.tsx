@@ -1,9 +1,10 @@
+
 export interface IAction {
     type: string,
     payload: any
 }
 export interface IUserReducer{
-    userInfor: {
+    userInfo: {
         email: string,
         username: string,
         userId: string,

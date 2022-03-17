@@ -6,7 +6,9 @@ import LoginPage from "../Pages/Login";
 import MatchBetPage from "../Pages/MatchBet";
 import MatchesPage from "../Pages/Matches";
 import UserPage from "../Pages/User";
+import ChangeAvatarForm from "../Pages/User/Component/ChangeAvatarForm";
 import ChangeInforForm from "../Pages/User/Component/ChangeInforForm";
+import ChangePasswordForm from "../Pages/User/Component/ChangePasswordForm";
 
 const AppRoutes = () => {
   return (
@@ -21,6 +23,8 @@ const AppRoutes = () => {
         </Route>
         <Route path="/user" element={<UserPage/>}>
           <Route path="" element={<ChangeInforForm/>}></Route>
+          <Route path="password" element={<ChangePasswordForm/>}></Route>
+          <Route path="avatar" element={<ChangeAvatarForm/>}></Route>
         </Route>
       </Route>
     </Routes>
