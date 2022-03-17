@@ -180,8 +180,8 @@
       align-items: center;
       .team-choose__flex-container--home {
         &:hover {
-          background: #ff4747;
-          filter: drop-shadow(0 0 30px #ff4747);
+          background: $team-home-primary;
+          filter: drop-shadow(0 0 30px $team-home-primary);
           span {
             color: black;
           }
@@ -198,8 +198,8 @@
       }
       .team-choose__flex-container--away {
         &:hover {
-          background: #4f7aed;
-          filter: drop-shadow(0 0 30px #4f7aed);
+          background: $team-away-primary;
+          filter: drop-shadow(0 0 30px $team-away-primary);
           span {
             color: black;
           }
@@ -224,14 +224,14 @@
       margin-left: 0.75rem;
       margin-right: 0.75rem;
       flex: 0 0 666px;
-      background-color: rgba(21, 139, 227, 1);
+      background-color: rgba($team-away-primary, 1);
       height: 12px;
       border-radius: 8px;
       &--value {
         height: 100%;
         position: absolute;
         top: 0;
-        background-color: rgba(255, 71, 71, 1);
+        background-color: rgba($team-home-primary, 1);
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
         &::after {
@@ -317,21 +317,27 @@
         padding-top: 6px !important;
       }
       &--home {
-        border: 1px solid #cb3333;
+        border: 1px solid $team-home-primary;
         span {
-          color: #cb3333;
+          color: $team-home-primary;
         }
         &:hover {
-          background: #e09c9c;
+          background: rgba($team-home-primary, 0.8);
+          span {
+            color: black;
+          }
         }
       }
       &--away {
-        border: 1px solid #4f7aed;
+        border: 1px solid $team-away-primary;
         span {
-          color: #4f7aed;
+          color: $team-away-primary;
         }
         &:hover {
-          background: #7d97df;
+          background: rgba($team-away-primary, 0.8);
+          span {
+            color: black;
+          }
         }
       }
     }
@@ -350,8 +356,8 @@
   }
   &--home {
     border-left: none !important;
-    border: 2px solid #ff4747;
-    filter: drop-shadow(0 0 15px #ff4747);
+    border: 2px solid $team-home-primary;
+    filter: drop-shadow(0 0 15px $team-home-primary);
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     &::after {
@@ -365,17 +371,17 @@
       border-style: solid;
       left: calc(100% - 1px);
       border-color: transparent transparent transparent #fff;
-      filter: drop-shadow(2px 0 0 #ff4747);
+      filter: drop-shadow(2px 0 0 $team-home-primary);
       border-width: 98px 0 98px 40px;
     }
     &:hover {
-      filter: drop-shadow(0 0 70px #ff4747);
+      filter: drop-shadow(0 0 70px $team-home-primary);
     }
   }
   &--away {
     border-right: none !important;
-    border: 2px solid #4f7aed;
-    filter: drop-shadow(0 0 15px #4f7aed);
+    border: 2px solid $team-away-primary;
+    filter: drop-shadow(0 0 15px $team-away-primary);
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     &::after {
@@ -389,11 +395,11 @@
       border-style: solid;
       right: calc(100% - 1px);
       border-color: transparent #fff transparent transparent;
-      filter: drop-shadow(-2px 0 0 #4f7aed);
+      filter: drop-shadow(-2px 0 0 $team-away-primary);
       border-width: 98px 40px 98px 0;
     }
     &:hover {
-      filter: drop-shadow(0 0 70px #4f7aed);
+      filter: drop-shadow(0 0 70px $team-away-primary);
     }
   }
 }
@@ -447,13 +453,13 @@
       color: rgba(21, 67, 91, 1);
     }
     &--home {
-      border: 1px solid rgba(255, 71, 71, 1);
+      border: 1px solid $team-home-primary;
     }
     &--draw {
       border: 1px solid #313131;
     }
     &--away {
-      border: 1px solid #4f7aed;
+      border: 1px solid $team-away-primary;
     }
   }
   &--home {
@@ -503,7 +509,7 @@
 
 .bet-active {
   .team-choose__flex-container--home {
-    background: #ff4747;
+    background: $team-home-primary;
     span {
       color: black;
     }
@@ -515,7 +521,7 @@
     }
   }
   .team-choose__flex-container--away {
-    background: #4f7aed;
+    background: $team-away-primary;
     span {
       color: black;
     }

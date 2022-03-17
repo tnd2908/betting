@@ -23,11 +23,20 @@ button {
 }
 body {
   background-color: #292929 !important;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-light;
+    outline: 1px solid $primary-light;
+    border-radius: 20px;
+  }
 }
 
 input {
   outline: none !important;
 }
-h6{
+h6 {
   font-size: 1.05rem;
 }

@@ -16,8 +16,8 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #c95a64;
-    outline: 1px solid #c95a64;
+    background-color: $primary-light;
+    outline: 1px solid $primary-light;
     border-radius: 20px;
   }
   &__title {
@@ -42,9 +42,9 @@
   &__radio {
     span {
       span {
-        border-color: #cf1322 !important;
+        border-color: $primary !important;
         &::after {
-          background-color: #cf1322;
+          background-color: $primary;
         }
       }
     }
@@ -52,8 +52,8 @@
   &__checkbox {
     .ant-checkbox-checked {
       .ant-checkbox-inner {
-        background-color: #c95a64 !important;
-        border-color: #c95a64 !important;
+        background-color: $primary-light !important;
+        border-color: $primary-light !important;
       }
     }
   }
@@ -72,8 +72,8 @@
         }
 
         &::-webkit-scrollbar-thumb {
-          background-color: #c95a64;
-          outline: 1px solid #c95a64;
+          background-color: $primary-light;
+          outline: 1px solid $primary-light;
           border-radius: 20px;
         }
       }
@@ -86,12 +86,12 @@
   left: 0px;
   top: 50%;
   padding: 4px 10px;
-  border-color: #ea1a1a;
-  background: #c95a64 !important;
+  border-color: $primary;
+  background: $primary-light !important;
   z-index: 19;
   &:hover {
     background: #c5404b !important;
-    border-color: #ea1a1a;
+    border-color: $primary;
   }
 }
 
@@ -117,7 +117,7 @@
       animation: moveInTop 0.8s ease-out;
     }
     &--past {
-      color: #ea1a1a;
+      color: $primary;
       animation: fadeIn 1s ease-in;
     }
   }
@@ -267,21 +267,25 @@
   color: rgb(255, 255, 255);
   background: #292929 !important;
   overflow-y: scroll !important;
-  border: 2px solid #c95a64;
+  border: 2px solid $primary-light;
   height: 536px;
   border-radius: 5px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
+  transition: 0.5s;
   animation: fadeBump 0.5s ease-out;
   &::-webkit-scrollbar {
     width: 5px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #c95a64;
-    outline: 1px solid #c95a64;
+    background-color: $primary-light;
+    outline: 1px solid $primary-light;
     border-radius: 20px;
+  }
+  &:hover {
+    filter: drop-shadow(0 0 20px $primary-light);
   }
 }
 

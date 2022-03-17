@@ -87,27 +87,20 @@
           background: linear-gradient(270deg, transparent, $primary-light);
         }
         &:nth-child(4) {
-            bottom: -100%;
-            left: 0;
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(360deg, transparent, $primary-light);
-          }
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, $primary-light);
+        }
       }
     }
   }
   &__text {
     color: rgb(243, 227, 86);
     text-transform: uppercase;
-    text-shadow: 1px 1px 1px $primary-light, 1px 2px 1px $primary-light,
-      1px 3px 1px $primary-light, 1px 4px 1px $primary-light,
-      1px 5px 1px $primary-light, 1px 6px 1px $primary-light,
-      1px 7px 1px $primary-light, 1px 8px 1px $primary-light,
-      1px 9px 1px $primary-light, 1px 10px 1px $primary-light,
-      1px 18px 6px rgba($primary-light, 0.4),
-      1px 22px 10px rgba($primary-light, 0.4),
-      1px 25px 35px rgba($primary-light, 0.4),
-      1px 30px 60px rgba($primary-light, 0.4);
+    transition: 0.2s;
+    animation: wink-light 1.5s linear infinite;    
     &--main {
       font-size: 12em;
       font-weight: 700;
