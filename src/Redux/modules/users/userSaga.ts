@@ -1,6 +1,6 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import { USER_ACTION } from '../../Utils/constant';
-import { IAction } from '../../Utils/interface';
+import { USER_ACTION } from '../../../Utils/constant';
+import { IAction } from '../../../Utils/interface';
 
 export function* authSaga(){
     yield takeLatest(USER_ACTION.LOGIN, function*callBack(action :IAction){

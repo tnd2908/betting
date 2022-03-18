@@ -5,7 +5,7 @@ import './styles.scss'
 import { BrowserRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
-import store from './Redux/store';
+import store from './redux/store';
 import AppRoutes from './AppRoutes';
 function App() {
 	return (

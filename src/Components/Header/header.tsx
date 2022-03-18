@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/Images/OSD-Logo1-Red.png'
-import { State } from '../../Redux/Reducer';
+import { State } from '../../redux/rootReducer';
 import Search from '../Search/Search';
 const DropdownMenu = () => {
     return (
