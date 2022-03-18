@@ -1,5 +1,5 @@
 import axios from "axios"
-import { baseURL } from "./constant"
+import { baseURL } from "../constants/constant"
 import queryString from 'query-string'
 
 const axiosClient = axios.create({

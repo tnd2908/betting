@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 import { Col } from "antd";
 
-import PremierLeague from "../../../Assets/Images/Premier-League.png";
+import PremierLeague from "../../../assets/Images/Premier-League.png";
 
 type Props = {};
 
 const MatchItem = (props: Props) => {
   return (
-    <Col xxl={8} xl={12} lg={24} md={12} sm={24} xs={24} >
+    <Col xxl={8} xl={12} lg={24} md={12} sm={24} xs={24}>
       <div className="match-item">
         <Link to="/matches/abc" className="match-item__link" />
         <div className="match-item__league">

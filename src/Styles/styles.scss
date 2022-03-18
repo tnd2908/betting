@@ -1,0 +1,19 @@
+//Initial import
+@import "./abstracts/functions";
+@import "./abstracts/mixin";
+@import "./abstracts/variable";
+@import "./base/animations";
+@import "./base/base";
+@import "./components/button";
+@import "./components/text";
+@import "./components/common";
+
+//Page Style
+@import "../Pages/Home/home.scss";
+@import "../Pages/Login/style.scss";
+@import "../Pages/Matches/style.scss";
+@import "../Pages/User/style.scss";
+@import "../Pages/MatchBet/style.scss";
+@import "../Pages/NotFound/style.scss";
+
+//Components

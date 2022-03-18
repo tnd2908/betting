@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
-
-import { Row, Col } from "antd";
-
 import {
-  UserOutlined,
-  ClockCircleOutlined,
   CalendarOutlined,
+  ClockCircleOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
-
-import PremierLeague from "../../Assets/Images/Premier-League.png";
+import React, { useEffect, useState } from "react";
+import PremierLeague from "../../assets/Images/Premier-League.png";
 
 type Props = {};
 

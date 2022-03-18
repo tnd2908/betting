@@ -2,7 +2,7 @@ import { Avatar, Col, Drawer, Dropdown, Row } from 'antd';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import logo from '../../Assets/Images/OSD-Logo1-Red.png'
+import logo from '../../assets/Images/OSD-Logo1-Red.png'
 import { State } from '../../redux/rootReducer';
 import Search from '../Search/Search';
 const DropdownMenu = () => {

@@ -1,9 +1,7 @@
-import { PageHeader } from 'antd';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import bg from '../../../Assets/Images/money.png'
-import bgtop from '../../../Assets/Images/Logo-White.png'
-import Button from '../../../Components/Button/Button';
+import bgtop from '../../../assets/Images/Logo-White.png';
+import Button from '../../../components/Button/Button';
 
 const CardFormRight = () => {
     const navigate = useNavigate();

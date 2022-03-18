@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input } from 'antd';
-import Button from '../../../Components/Button/Button';
+import Button from '../../../components/Button/Button';
 
 const ChangePasswordForm = () => {
     return (

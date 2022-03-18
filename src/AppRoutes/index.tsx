@@ -1,15 +1,15 @@
 import React from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
-import Layout from "../Components/Layout/layout";
-import Home from "../Pages/Home";
-import LoginPage from "../Pages/Login";
-import MatchBetPage from "../Pages/MatchBet";
-import MatchesPage from "../Pages/Matches";
-import NotFound from "../Pages/NotFound/NotFound";
-import UserPage from "../Pages/User";
-import ChangeAvatarForm from "../Pages/User/Component/ChangeAvatarForm";
-import ChangeInforForm from "../Pages/User/Component/ChangeInforForm";
-import ChangePasswordForm from "../Pages/User/Component/ChangePasswordForm";
+import Layout from "../components/Layout/layout";
+import Home from "../pages/Home";
+import LoginPage from "../pages/Login";
+import MatchBetPage from "../pages/MatchBet";
+import MatchesPage from "../pages/Matches";
+import NotFound from "../pages/NotFound/NotFound";
+import UserPage from "../pages/User";
+import ChangeAvatarForm from "../pages/User/Component/ChangeAvatarForm";
+import ChangeInforForm from "../pages/User/Component/ChangeInforForm";
+import ChangePasswordForm from "../pages/User/Component/ChangePasswordForm";
 
 const AppRoutes = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import notfound from "../../Assets/Videos/notfound.mp4";
+import notfound from "../../assets/Videos/notfound.mp4";
 
 const NotFound = () => {
   return (

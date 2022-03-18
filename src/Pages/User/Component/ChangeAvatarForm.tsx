@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, message, Upload } from 'antd';
-import { baseURL } from '../../../Utils/constant';
+import { baseURL } from '../../../constants/constant';
 import { CloudUploadOutlined } from '@ant-design/icons'
-import Button from '../../../Components/Button/Button';
+import Button from '../../../components/Button/Button';
 
 const normFile = (e: any) => {
     console.log('Upload event:', e);

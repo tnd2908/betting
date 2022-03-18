@@ -1,9 +1,9 @@
 import { Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import Button from '../../../Components/Button/Button';
+import Button from '../../../components/Button/Button';
 import { userRegister } from '../../../redux/modules/users/userActions';
-import { IRegisterField } from '../../../Utils/interface';
+import { IRegisterField } from '../../../utils/interface';
 
 const RegisterForm = () => {
     const dispatch = useDispatch();

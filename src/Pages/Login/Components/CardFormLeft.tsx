@@ -1,8 +1,7 @@
-import { PageHeader } from 'antd';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import bg from '../../../Assets/Images/money.png'
-import bgtop from '../../../Assets/Images/Logo-White.png'
+import bgtop from '../../../assets/Images/Logo-White.png';
+import bg from '../../../assets/Images/money.png';
 
 const CardFormLeft = () => {
     const navigate = useNavigate();
