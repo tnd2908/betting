@@ -1,5 +1,5 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import { USER_ACTION } from './userActions';
+import { USER_ACTION } from './user-actions';
 import { IAction } from '../../../utils/interface';
 
 export function* authSaga(){

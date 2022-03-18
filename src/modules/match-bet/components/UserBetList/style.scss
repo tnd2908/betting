@@ -1,0 +1,15 @@
+.user-bet-list {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #5ac963;
+    outline: 1px solid #5ac963;
+    border-radius: 20px;
+  }
+}

@@ -7,9 +7,9 @@ import MatchBetPage from "../pages/MatchBet";
 import MatchesPage from "../pages/Matches";
 import NotFound from "../pages/NotFound/NotFound";
 import UserPage from "../pages/User";
-import ChangeAvatarForm from "../pages/User/Component/ChangeAvatarForm";
-import ChangeInforForm from "../pages/User/Component/ChangeInforForm";
-import ChangePasswordForm from "../pages/User/Component/ChangePasswordForm";
+import ChangeAvatarForm from "../modules/user/components/ChangeAvatarForm";
+import ChangeInforForm from "../modules/user/components/ChangeInforForm";
+import ChangePasswordForm from "../modules/user/components/ChangePasswordForm";
 
 const AppRoutes = () => {
   return (

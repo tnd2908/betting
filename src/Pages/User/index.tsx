@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Menu from './Component/Menu';
+import Menu from '../../modules/user/components/Menu';
 
 const UserPage = () => {
     return (

@@ -1,4 +1,4 @@
-import { USER_ACTION } from "./userActions"
+import { USER_ACTION } from "./user-actions"
 import { IAction, IUserReducer } from "../../../utils/interface"
 
 const initialState : IUserReducer = {

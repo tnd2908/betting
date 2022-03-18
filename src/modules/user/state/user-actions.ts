@@ -8,7 +8,7 @@ import {
   GoogleLoginResponse,
   GoogleLoginResponseOffline,
 } from "react-google-login";
-import createAction from "../../helpers/createAction";
+import createAction from "../../../utils/createAction";
 
 export const USER_ACTION = {
   LOGIN: 'USER_LOGIN',

@@ -1,9 +1,9 @@
 import { Col, Row, Drawer, Button } from "antd";
 import React, { useState } from "react";
 import { SettingOutlined } from "@ant-design/icons";
-import SidebarFilter from "./components/Filter";
-import MatchItem from "./components/MatchItem";
-import MatchList from "./components/MatchList";
+import SidebarFilter from "../../modules/match/components/Filter";
+import MatchItem from "../../modules/match/components/MatchItem";
+import MatchList from "../../modules/match/components/MatchList";
 
 const MatchesPage = () => {
   const [visible, setVisible] = useState(false);

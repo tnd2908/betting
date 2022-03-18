@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { State } from '../../../redux/rootReducer';
+import { State } from '../../../state-management/reducers';
 
 const menu = [
     {

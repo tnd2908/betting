@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/Images/OSD-Logo1-Red.png'
-import { State } from '../../redux/rootReducer';
+import { State } from '../../state-management/reducers';
 import Search from '../Search/Search';
 const DropdownMenu = () => {
     return (
@@ -38,7 +38,7 @@ const Header = () => {
                 <Col md={8}>
                     <div className="navbar__link__container">
                         <Link to='/' className='navbar__link'>Rules</Link>
-                        <Link to='/' className='navbar__link'>Bet</Link>
+                        <Link to='/matches' className='navbar__link'>Bet</Link>
                         <Link to='/' className='navbar__link'>History</Link>
                         {user.userId
                             ?<Dropdown overlay={<DropdownMenu/>} placement='bottomRight' overlayClassName='navbar__dropdown'>

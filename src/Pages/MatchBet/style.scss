@@ -328,6 +328,18 @@
           }
         }
       }
+      &--draw {
+        border: 1px solid #313131;
+        span {
+          color: #313131;
+        }
+        &:hover {
+          background: rgba(#313131, 0.8);
+          span {
+            color: white;
+          }
+        }
+      }
       &--away {
         border: 1px solid $team-away-primary;
         span {
@@ -478,7 +490,6 @@
   flex: 1 0 190px;
   &__bet {
     display: flex;
-    cursor: pointer;
     align-items: center;
     justify-content: center;
     min-width: 95px;
@@ -486,11 +497,11 @@
     margin: 0 50px;
     &--label {
       position: absolute;
-      font-size: 0.875rem;
+      font-size: 1rem;
       font-weight: 500;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 1);
-      top: 10px;
+      top: 50px;
     }
     &--container {
       display: flex;
@@ -894,6 +905,12 @@
     min-width: 100px;
     height: 75px;
     flex: 1 0 100px;
+    &__bet {
+      &--label {
+        top: 10px;
+        font-size: 0.6rem;
+      }
+    }
   }
   .team-choose {
     &__flex-container {

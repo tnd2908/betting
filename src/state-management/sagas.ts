@@ -1,5 +1,5 @@
 import { all } from 'redux-saga/effects';
-import { authSaga } from './modules/users/userSaga';
+import { authSaga } from '../modules/user/state/user-saga';
 
 // const appSaga = [fork(authSaga)]
 

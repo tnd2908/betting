@@ -2,7 +2,7 @@ import { Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '../../../components/Button/Button';
-import { userRegister } from '../../../redux/modules/users/userActions';
+import { userRegister } from '../../../modules/user/state/user-actions';
 import { IRegisterField } from '../../../utils/interface';
 
 const RegisterForm = () => {
