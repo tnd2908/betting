@@ -2,33 +2,33 @@ import {
   CalendarOutlined,
   ClockCircleOutlined,
   UserOutlined,
-} from "@ant-design/icons";
-import { Modal } from "antd";
-import React, { useEffect, useState } from "react";
-import PremierLeague from "../../assets/Images/Premier-League.png";
-import UserBetList from "../../modules/match-bet/components/UserBetList/UserBetList";
+} from '@ant-design/icons';
+import { Modal } from 'antd';
+import React, { useEffect, useState } from 'react';
+import PremierLeague from '../../assets/Images/Premier-League.png';
+import UserBetList from '../../modules/match-bet/components/UserBetList/UserBetList';
 
 type Props = {};
 
 const MatchBetPage = (props: Props) => {
   const [isMobile, setMatches] = useState(
-    window.matchMedia("(max-width: 768px)").matches
+    window.matchMedia('(max-width: 768px)').matches
   );
 
   const [modalVisible, setModalVisible] = useState(false);
-  const [userChooseList, setUserChooseList] = useState("");
+  const [userChooseList, setUserChooseList] = useState('');
 
   const openModalPeople = (id: string) => {
     setModalVisible(true);
     setUserChooseList(id);
   };
 
-  const [teamChoose, setTeamChoose] = useState("");
+  const [teamChoose, setTeamChoose] = useState('');
 
   useEffect(() => {
     window
-      .matchMedia("(max-width: 768px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
+      .matchMedia('(max-width: 768px)')
+      .addEventListener('change', (e) => setMatches(e.matches));
   }, []);
 
   const chooseTeamHandler = (id: string) => {
@@ -37,15 +37,15 @@ const MatchBetPage = (props: Props) => {
   };
 
   const classTeamHomeChoose = `${
-    teamChoose === "teamHome" ? "bet-active" : ""
+    teamChoose === 'teamHome' ? 'bet-active' : ''
   } `;
-  const classDrawChoose = `${teamChoose === "draw" ? "bet-active" : ""} `;
+  const classDrawChoose = `${teamChoose === 'draw' ? 'bet-active' : ''} `;
 
   const classTeamAwayChoose = `${
-    teamChoose === "teamAway" ? "bet-active" : ""
+    teamChoose === 'teamAway' ? 'bet-active' : ''
   } `;
 
-  const modalTitle = `People bet ${userChooseList}`
+  const modalTitle = `People bet ${userChooseList}`;
 
   return (
     <>
@@ -115,7 +115,7 @@ const MatchBetPage = (props: Props) => {
                 <div className="bet-team bet-team--home">
                   <div
                     className="bet-team__people bet-team__people--home"
-                    onClick={openModalPeople.bind(this, "teamHome")}
+                    onClick={openModalPeople.bind(this, 'teamHome')}
                   >
                     <div className="bet-team__people--button bet-team__people--button--home">
                       <UserOutlined />
@@ -126,7 +126,7 @@ const MatchBetPage = (props: Props) => {
                   </div>
                   <div
                     className="bet-team__container bet-team__container--home"
-                    onClick={chooseTeamHandler.bind(this, "teamHome")}
+                    onClick={chooseTeamHandler.bind(this, 'teamHome')}
                   >
                     <div className="team-container">
                       <div className="team-container__logo team-container__logo--home">
@@ -153,7 +153,7 @@ const MatchBetPage = (props: Props) => {
                   <div className="draw__bet">
                     <div
                       className="bet-team__people bet-team__people--draw"
-                      onClick={openModalPeople.bind(this, "draw")}
+                      onClick={openModalPeople.bind(this, 'draw')}
                     >
                       <div className="bet-team__people--button bet-team__people--button--draw">
                         <UserOutlined />
@@ -165,7 +165,7 @@ const MatchBetPage = (props: Props) => {
                     {!isMobile && (
                       <div
                         className="draw__bet--container"
-                        onClick={chooseTeamHandler.bind(this, "draw")}
+                        onClick={chooseTeamHandler.bind(this, 'draw')}
                       >
                         <div className={classDrawChoose}>
                           <div className="team-choose__container">
@@ -183,7 +183,7 @@ const MatchBetPage = (props: Props) => {
                 <div className="bet-team bet-team--away">
                   <div
                     className="bet-team__people bet-team__people--away"
-                    onClick={openModalPeople.bind(this, "teamAway")}
+                    onClick={openModalPeople.bind(this, 'teamAway')}
                   >
                     <div className="bet-team__people--button bet-team__people--button--away">
                       <UserOutlined />
@@ -194,7 +194,7 @@ const MatchBetPage = (props: Props) => {
                   </div>
                   <div
                     className="bet-team__container bet-team__container--away"
-                    onClick={chooseTeamHandler.bind(this, "teamAway")}
+                    onClick={chooseTeamHandler.bind(this, 'teamAway')}
                   >
                     <div className="team-container">
                       <div className="team-container__logo team-container__logo--away">
@@ -224,7 +224,7 @@ const MatchBetPage = (props: Props) => {
                     <div className={classTeamHomeChoose}>
                       <div
                         className="team-choose__container"
-                        onClick={chooseTeamHandler.bind(this, "teamHome")}
+                        onClick={chooseTeamHandler.bind(this, 'teamHome')}
                       >
                         <div className="team-choose__flex-container team-choose__flex-container--home">
                           <span>Vitesse</span>
@@ -236,7 +236,7 @@ const MatchBetPage = (props: Props) => {
                     <div className={classDrawChoose}>
                       <div
                         className="team-choose__container"
-                        onClick={chooseTeamHandler.bind(this, "draw")}
+                        onClick={chooseTeamHandler.bind(this, 'draw')}
                       >
                         <div className="team-choose__flex-container team-choose__flex-container--draw">
                           <span>Draw</span>
@@ -248,7 +248,7 @@ const MatchBetPage = (props: Props) => {
                     <div className={classTeamAwayChoose}>
                       <div
                         className="team-choose__container"
-                        onClick={chooseTeamHandler.bind(this, "teamAway")}
+                        onClick={chooseTeamHandler.bind(this, 'teamAway')}
                       >
                         <div className="team-choose__flex-container team-choose__flex-container--away">
                           <span>Roma</span>
@@ -265,7 +265,7 @@ const MatchBetPage = (props: Props) => {
                   <div className="match-bet-content__winning-rate__progress-bar">
                     <span
                       className="match-bet-content__winning-rate__progress-bar--value"
-                      style={{ width: "36%" }}
+                      style={{ width: '36%' }}
                     ></span>
                   </div>
                   <span className="text-blue-faint font-black italic">64%</span>
