@@ -97,7 +97,7 @@ const MatchBetPage = (props: Props) => {
                   <span>0</span>
                 </div>
               </div>
-              {/* Header sub */}
+              {/* handicap */}
               <div className="match-bet-content__header match-bet-content__header--sub">
                 <div className="match-bet-content__header--sub__score">
                   <span>0</span>

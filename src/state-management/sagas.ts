@@ -1,9 +1,10 @@
 import { all } from 'redux-saga/effects';
-import { authSaga } from '../modules/user/state/user-saga';
+import filterSagas from '../modules/filter/state/saga';
+import authSagas from '../modules/user/state/user-saga';
 
 // const appSaga = [fork(authSaga)]
 
 function *rootSaga(){
-    yield(all([authSaga()]))
+    yield(all([...authSagas,...filterSagas]))
 }
 export default rootSaga

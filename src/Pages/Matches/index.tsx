@@ -1,7 +1,7 @@
 import { Col, Row, Drawer, Button } from "antd";
 import React, { useState } from "react";
 import { SettingOutlined } from "@ant-design/icons";
-import SidebarFilter from "../../modules/match/components/Filter";
+import SidebarFilter from "../../modules/filter/components/Filter";
 import MatchItem from "../../modules/match/components/MatchItem";
 import MatchList from "../../modules/match/components/MatchList";
 
