@@ -32,9 +32,17 @@ const MatchItem = (props: Props) => {
           <div className="match-item__info--time">
             <span>13:00</span>
           </div>
+          <div className="match-item__info--time">
+            <div>
+              <span>2</span>
+              <span> : </span>
+              <span>0</span>
+            </div>
+          </div>
           <div className="match-item__info--date">
             <span>11/03/2022</span>
           </div>
+
         </div>
         <div className="match-item__team match-item__team--away">
           <div className="match-item__team--logo">

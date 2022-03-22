@@ -56,6 +56,7 @@ export const LEAGUE_LIST: Array<ILeagueFilter> = [
       { id: 't22', name: 'Venezia' },
       { id: 't23', name: 'Lazio' },
       { id: 't24', name: 'Genoa' },
+      { id: 't29', name: 'Juventus' }
     ],
   },
   {
