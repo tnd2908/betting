@@ -1,11 +1,16 @@
 import { Col, Row, Drawer, Button } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SettingOutlined } from "@ant-design/icons";
 import SidebarFilter from "../../modules/filter/components/Filter";
 import MatchItem from "../../modules/match/components/MatchItem";
 import MatchList from "../../modules/match/components/MatchList";
+import { useDispatch, useSelector } from 'react-redux';
+import { State } from "../../state-management/reducers";
+import { getMatchListRequest } from "../../modules/match/state/actions";
 
 const MatchesPage = () => {
+  const dispatch = useDispatch();
+
   const [visible, setVisible] = useState(false);
   const showSidebar = () => {
     setVisible(true);
@@ -13,6 +18,15 @@ const MatchesPage = () => {
   const closeSidebar = () => {
     setVisible(false);
   };
+
+  const upcomingMatchList = useSelector((state: State) => state.match.upcomingMatchList);
+  const liveMatchList = useSelector((state: State) => state.match.liveMatchList);
+  const pastMatchList = useSelector((state: State) => state.match.pastMatchList);
+
+  useEffect(() => {
+    dispatch(getMatchListRequest());
+  }, [dispatch]);
+
   return (
     <Row>
       {!visible && (
@@ -44,14 +58,19 @@ const MatchesPage = () => {
             <h2 className="match-list-content__title match-list-content__title--up">
               Upcoming Match
             </h2>
-            <MatchList />
+            <MatchList matchList={upcomingMatchList}/>
           </div>
-
+          <div className="match-list-content">
+            <h2 className="match-list-content__title match-list-content__title--past">
+              Live Match
+            </h2>
+            <MatchList matchList={liveMatchList}/>
+          </div>
           <div className="match-list-content">
             <h2 className="match-list-content__title match-list-content__title--past">
               Past Match
             </h2>
-            <MatchList />
+            <MatchList matchList={pastMatchList}/>
           </div>
         </div>
       </Col>

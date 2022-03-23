@@ -112,3 +112,15 @@
       1px 9px 1px $primary-light, 1px 10px 1px $primary-light;
   }
 }
+
+@keyframes live-text {
+  0% {
+    color: #f30707; 
+  }
+  50% {
+    color: #9e0000; 
+  }
+  100% {
+    color: #f30707; 
+  }
+}

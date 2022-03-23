@@ -168,7 +168,7 @@
     text-transform: uppercase;
     font-weight: 500;
     color: #ddd;
-    &--icon {
+    &__icon {
       width: 25px;
       height: 25px;
       margin-right: 10px;
@@ -202,7 +202,7 @@
     &--away {
       right: 1.2rem;
     }
-    &--logo {
+    &__logo {
       display: block;
       position: relative;
       margin: 1rem auto 0.5rem;
@@ -220,8 +220,8 @@
         height: 100%;
       }
     }
-    &--name {
-      font-size: 1.5em;
+    &__name {
+      font-size: 1em;
       font-weight: 500;
       margin: 0;
       height: 20px;
@@ -231,24 +231,49 @@
     }
   }
   &__info {
-    margin-top: 1.5rem;
     text-align: center;
     margin: 0 auto;
     display: table-cell;
     vertical-align: middle;
-    &--time {
+    &__time {
       font-weight: 500;
       line-height: 1.5;
       color: #d0d0d0;
       display: block;
       font-size: 1.8rem;
-      margin-top: 0.25rem;
+      margin-top: 1rem;
     }
-    &--date {
+    &__score {
+      display: block;
+      margin-bottom: 1rem;
+      span {
+        color: #e96239;
+        font-weight: 500;
+        line-height: 1;
+        font-size: 2.5rem;
+      }
+      &--pain {
+        padding: 0px 30px;
+      }
+    }
+    &__live {
+      display: block;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      span {
+        color: #f30707; 
+        font-weight: 500;
+        line-height: 1;
+        font-size: 1.5rem;
+        padding: 0px 5px;
+        animation: live-text 3s ease infinite; 
+      }     
+    }
+    &__date {
       line-height: 1.5;
       font-weight: 500;
       font-size: 1rem;
-      color: #8e8f92;
+      color: #8e8f92;      
     }
   }
   &:hover {
@@ -266,11 +291,9 @@
   padding: 24px 48px 24px 48px;
   color: rgb(255, 255, 255);
   background: #292929 !important;
-  overflow-y: scroll !important;
-  border: 2px solid $primary-light;
-  height: 536px;
+  max-height: 536px;
   border-radius: 5px;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   scrollbar-width: thin;
   transition: 0.5s;
@@ -286,6 +309,7 @@
   }
   &:hover {
     filter: drop-shadow(0 0 20px $primary-light);
+    overflow-y: auto;
   }
 }
 
@@ -299,24 +323,29 @@
       padding: 4px 8px;
       font-size: 10px;
       border-radius: 0 0 12px 12px;
-      &--icon {
+      &__icon {
         margin-right: 5px;
       }
     }
     &__team {
-      &--logo {
+      &__logo {
         height: 60px;
         width: 60px;
       }
-      &--name {
-        font-size: 1.2em;
+      &__name {
+        font-size: 0.8em;
       }
     }
     &__info {
-      &--time {
+      &__time {
         font-size: 1.5rem;
       }
-      &--date {
+      &__live {
+        span {
+          font-size: 1.2rem;
+        }     
+      }
+      &__date {
         font-size: 0.9rem;
       }
     }
@@ -341,26 +370,40 @@
       min-width: 75%;
       padding: 2px 4px;
       border-radius: 0 0 10px 10px;
-      &--icon {
+      &__icon {
         margin-right: -3px;
         width: 22px;
         height: 22px;
       }
     }
     &__team {
-      &--logo {
+      &__logo {
         height: 50px;
         width: 50px;
       }
-      &--name {
-        font-size: 1em;
+      &__name {
+        font-size: 0.7em;
       }
     }
     &__info {
-      &--time {
+      &__time {
         font-size: 1.2rem;
       }
-      &--date {
+      &__score {
+        margin-bottom: 0.5rem;
+        span {
+          font-size: 1.8rem;
+        }
+        &--pain {
+          padding: 0px 20px;
+        }
+      }
+      &__live {
+        span {
+          font-size: 1rem;
+        }     
+      }
+      &__date {
         font-size: 0.8rem;
       }
     }

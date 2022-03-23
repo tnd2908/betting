@@ -18,3 +18,12 @@ export interface IMatchItem {
     status: number;
     score: number[];
 }
+
+export interface IMatchReducer {
+    isLoading: boolean;
+    error?: string;
+    matchList: Array<IMatchItem>;
+    upcomingMatchList: Array<IMatchItem>;
+    liveMatchList: Array<IMatchItem>;
+    pastMatchList: Array<IMatchItem>;
+}
