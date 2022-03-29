@@ -11,11 +11,12 @@ import UserBetList from '../../modules/match-bet/components/UserBetList/UserBetL
 type Props = {};
 
 const MatchBetPage = (props: Props) => {
-  const [isMobile, setMatches] = useState(
+  const [isMobile, setIsMobile] = useState(
     window.matchMedia('(max-width: 768px)').matches
   );
 
   const [modalVisible, setModalVisible] = useState(false);
+  const [modalConfirmVisible, setModalConfirmVisible] = useState(false);
   const [userChooseList, setUserChooseList] = useState('');
 
   const openModalPeople = (id: string) => {
@@ -23,27 +24,31 @@ const MatchBetPage = (props: Props) => {
     setUserChooseList(id);
   };
 
+  const confirmModalHandler = () => {
+    setModalConfirmVisible(false)
+  }
+  
+
   const [teamChoose, setTeamChoose] = useState('');
 
   useEffect(() => {
     window
       .matchMedia('(max-width: 768px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
+      .addEventListener('change', (e) => setIsMobile(e.matches));
   }, []);
 
   const chooseTeamHandler = (id: string) => {
+    setModalConfirmVisible(true);
     setTeamChoose(id);
     console.log(id);
   };
 
-  const classTeamHomeChoose = `${
-    teamChoose === 'teamHome' ? 'bet-active' : ''
-  } `;
+  const classTeamHomeChoose = `${teamChoose === 'teamHome' ? 'bet-active' : ''
+    } `;
   const classDrawChoose = `${teamChoose === 'draw' ? 'bet-active' : ''} `;
 
-  const classTeamAwayChoose = `${
-    teamChoose === 'teamAway' ? 'bet-active' : ''
-  } `;
+  const classTeamAwayChoose = `${teamChoose === 'teamAway' ? 'bet-active' : ''
+    } `;
 
   const modalTitle = `People bet ${userChooseList}`;
 
@@ -57,6 +62,18 @@ const MatchBetPage = (props: Props) => {
         onCancel={() => setModalVisible(false)}
       >
         <UserBetList />
+      </Modal>
+
+      <Modal
+        title="Confirm"
+        centered
+        visible={modalConfirmVisible}
+        onOk={confirmModalHandler}
+        onCancel={confirmModalHandler}
+        okText="Ok, sure"
+        cancelText="Cancel"
+      >
+        <h3 style={{color: 'black'}}>Are you sure to choose this team?</h3>
       </Modal>
 
       <div className="match-bet-page-content">

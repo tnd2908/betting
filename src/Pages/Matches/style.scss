@@ -158,15 +158,18 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 60%;
     min-width: 60%;
+    max-width: 60%;
     z-index: 3;
     padding: 8px 16px;
     border-radius: 0 0 15px 15px;
     background: rgba(255, 255, 255, 0.1);
     font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
     text-transform: uppercase;
     font-weight: 500;
+    line-height: 16px;
     color: #ddd;
     &__icon {
       width: 25px;
@@ -261,27 +264,23 @@
       margin-top: 0.5rem;
       margin-bottom: 1rem;
       span {
-        color: #f30707; 
+        color: #f30707;
         font-weight: 500;
         line-height: 1;
         font-size: 1.5rem;
         padding: 0px 5px;
-        animation: live-text 3s ease infinite; 
-      }     
+        animation: live-text 3s ease infinite;
+      }
     }
     &__date {
       line-height: 1.5;
       font-weight: 500;
       font-size: 1rem;
-      color: #8e8f92;      
+      color: #8e8f92;
     }
   }
   &:hover {
-    background: linear-gradient(
-      29deg,
-      rgb(70, 73, 87) 0%,
-      rgb(123, 128, 139) 100%
-    );
+    background: linear-gradient(29deg, rgb(70, 73, 87) 0%, rgb(123, 128, 139) 100%);
     transform: scale(1.05);
   }
 }
@@ -291,7 +290,7 @@
   padding: 24px 48px 24px 48px;
   color: rgb(255, 255, 255);
   background: #292929 !important;
-  max-height: 536px;
+  max-height: 532px;
   border-radius: 5px;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -343,7 +342,7 @@
       &__live {
         span {
           font-size: 1.2rem;
-        }     
+        }
       }
       &__date {
         font-size: 0.9rem;
@@ -357,6 +356,13 @@
   }
   .match-list {
     padding: 24px 24px 24px 24px;
+    border: 2px solid $primary-light;
+    overflow-y: auto !important;
+    max-height: 452px;
+    min-height: 238px;
+    &:hover {
+      filter: initial;
+    }
   }
 }
 
@@ -366,12 +372,12 @@
     border-radius: 18px;
     &__league {
       font-size: 9px;
-      max-width: 75%;
-      min-width: 75%;
+      max-width: 55%;
+      min-width: 55%;
       padding: 2px 4px;
       border-radius: 0 0 10px 10px;
       &__icon {
-        margin-right: -3px;
+        margin-right: 3px;
         width: 22px;
         height: 22px;
       }
@@ -401,7 +407,7 @@
       &__live {
         span {
           font-size: 1rem;
-        }     
+        }
       }
       &__date {
         font-size: 0.8rem;
@@ -415,5 +421,7 @@
   }
   .match-list {
     padding: 24px 12px 24px 12px;
+    max-height: 516px;
+    min-height: 188px;
   }
 }

@@ -242,5 +242,27 @@ export const MATCH_LIST: Array<IMatchItem> = [
     startTime: '04:00 12/02/2022',
     status: 2,
     score: [0, 0]
-  }
+  },
+  {
+    id: 'match12',
+    league: {
+      id: 'l1',
+      name: 'UEFA Champions League',
+      logo: 'https://api.sofascore.com/api/v1/unique-tournament/7/image',
+    },
+    teams: [
+      {
+        id: 't1',
+        name: 'SL Benfica',
+        logo: 'https://api.sofascore.com/api/v1/team/3006/image',
+      },
+      {
+        id: 't2',
+        name: 'Liverpool',
+        logo: 'https://api.sofascore.com/api/v1/team/44/image',
+      }],
+    startTime: '02:00 06/04/2022',
+    status: 0,
+    score: [0, 0]
+  },
 ]

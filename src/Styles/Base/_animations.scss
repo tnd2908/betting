@@ -87,40 +87,32 @@
 
 @keyframes wink-light {
   0% {
-    text-shadow: 1px 1px 1px $primary-light, 1px 2px 1px $primary-light,
-      1px 3px 1px $primary-light, 1px 4px 1px $primary-light,
-      1px 5px 1px $primary-light, 1px 6px 1px $primary-light,
-      1px 7px 1px $primary-light, 1px 8px 1px $primary-light,
-      1px 9px 1px $primary-light, 1px 10px 1px $primary-light;
+    text-shadow: 1px 1px 1px $primary-light, 1px 2px 1px $primary-light, 1px 3px 1px $primary-light,
+      1px 4px 1px $primary-light, 1px 5px 1px $primary-light, 1px 6px 1px $primary-light, 1px 7px 1px $primary-light,
+      1px 8px 1px $primary-light, 1px 9px 1px $primary-light, 1px 10px 1px $primary-light;
   }
   50% {
-    text-shadow: 1px 1px 1px $primary-light, 1px 2px 1px $primary-light,
-      1px 3px 1px $primary-light, 1px 4px 1px $primary-light,
-      1px 5px 1px $primary-light, 1px 6px 1px $primary-light,
-      1px 7px 1px $primary-light, 1px 8px 1px $primary-light,
-      1px 9px 1px $primary-light, 1px 10px 1px $primary-light,
-      1px 18px 6px rgba($primary-light, 0.4),
-      1px 22px 10px rgba($primary-light, 0.4),
-      1px 25px 35px rgba($primary-light, 0.4),
-      1px 30px 60px rgba($primary-light, 0.4);
+    text-shadow: 1px 1px 1px $primary-light, 1px 2px 1px $primary-light, 1px 3px 1px $primary-light,
+      1px 4px 1px $primary-light, 1px 5px 1px $primary-light, 1px 6px 1px $primary-light, 1px 7px 1px $primary-light,
+      1px 8px 1px $primary-light, 1px 9px 1px $primary-light, 1px 10px 1px $primary-light,
+      1px 18px 6px rgba($primary-light, 0.4), 1px 22px 10px rgba($primary-light, 0.4),
+      1px 25px 35px rgba($primary-light, 0.4), 1px 30px 60px rgba($primary-light, 0.4);
   }
   100% {
-    text-shadow: 1px 1px 1px $primary-light, 1px 2px 1px $primary-light,
-      1px 3px 1px $primary-light, 1px 4px 1px $primary-light,
-      1px 5px 1px $primary-light, 1px 6px 1px $primary-light,
-      1px 7px 1px $primary-light, 1px 8px 1px $primary-light,
-      1px 9px 1px $primary-light, 1px 10px 1px $primary-light;
+    text-shadow: 1px 1px 1px $primary-light, 1px 2px 1px $primary-light, 1px 3px 1px $primary-light,
+      1px 4px 1px $primary-light, 1px 5px 1px $primary-light, 1px 6px 1px $primary-light, 1px 7px 1px $primary-light,
+      1px 8px 1px $primary-light, 1px 9px 1px $primary-light, 1px 10px 1px $primary-light;
   }
 }
 
 @keyframes live-text {
   0% {
-    color: #f30707; 
+    color: #f30707;
   }
   50% {
-    color: #9e0000; 
+    color: #9e0000;
   }
   100% {
-    color: #f30707; 
+    color: #f30707;
   }
 }

@@ -5,6 +5,8 @@ export const matchActions = {
   GET_MATCH_LIST_REQUEST: 'GET_MATCH_LIST_REQUEST',
   GET_MATCH_LIST_SUCCESS: 'GET_MATCH_LIST_SUCCESS',
   GET_MATCH_LIST_FAILED: 'GET_MATCH_LIST_FAILED',
+  FILTER_MATCH_BY_LEAGUE: 'FILTER_MATCH_BY_LEAGUE',
+  FILTER_MATCH_BY_TEAM: 'FILTER_MATCH_BY_TEAM',
 };
 
 export const getMatchListRequest = () =>
@@ -15,4 +17,10 @@ export const getMatchListSuccess = (matchList: Array<IMatchItem>) =>
 
 export const getMatchListFailed = (error: string) =>
   createAction(matchActions.GET_MATCH_LIST_FAILED, { error });
+
+export const filterMatchByLeague = (leagueId: string) =>
+  createAction(matchActions.FILTER_MATCH_BY_LEAGUE, { leagueId });
+
+export const filterMatchByTeam = (teamIdArray: Array<string>) =>
+  createAction(matchActions.FILTER_MATCH_BY_TEAM, { teamIdArray });
 

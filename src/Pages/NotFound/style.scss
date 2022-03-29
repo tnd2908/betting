@@ -36,8 +36,8 @@
       &:hover {
         color: black;
         background: $primary-light;
-        box-shadow: 0 0 10px rgba($primary-light, 0.4),
-          0 0 40px rgba($primary-light, 0.4), 0 0 80px rgba($primary-light, 0.4);
+        box-shadow: 0 0 10px rgba($primary-light, 0.4), 0 0 40px rgba($primary-light, 0.4),
+          0 0 80px rgba($primary-light, 0.4);
         filter: drop-shadow(0 0 30px $primary-light);
         transition-delay: 0.5s;
         span {
@@ -100,7 +100,7 @@
     color: rgb(243, 227, 86);
     text-transform: uppercase;
     transition: 0.2s;
-    animation: wink-light 1.5s linear infinite;    
+    animation: wink-light 1.5s linear infinite;
     &--main {
       font-size: 12em;
       font-weight: 700;

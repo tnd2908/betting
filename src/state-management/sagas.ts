@@ -3,8 +3,6 @@ import filterSagas from '../modules/filter/state/saga';
 import matchSagas from '../modules/match/state/saga';
 import authSagas from '../modules/user/state/user-saga';
 
-// const appSaga = [fork(authSaga)]
-
 function *rootSaga(){
     yield(all([...authSagas,...filterSagas,...matchSagas]))
 }

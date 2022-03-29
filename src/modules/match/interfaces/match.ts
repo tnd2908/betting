@@ -23,6 +23,7 @@ export interface IMatchReducer {
     isLoading: boolean;
     error?: string;
     matchList: Array<IMatchItem>;
+    matchListFilter: Array<IMatchItem>;
     upcomingMatchList: Array<IMatchItem>;
     liveMatchList: Array<IMatchItem>;
     pastMatchList: Array<IMatchItem>;

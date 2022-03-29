@@ -1,10 +1,9 @@
-import { call, fork, put, takeEvery } from 'redux-saga/effects';
+import { call, fork, put, takeLatest } from 'redux-saga/effects';
 import { IMatchItem } from '../interfaces/match';
 import * as service from '../match-service';
 import {
-  matchActions,
   getMatchListFailed,
-  getMatchListSuccess,
+  getMatchListSuccess, matchActions
 } from './actions';
 
 export function* getMatchList() {
@@ -22,8 +21,8 @@ export function* getMatchList() {
 }
 
 function* watchMatchListRequest() {
-  console.log('filter');
-  yield takeEvery(matchActions.GET_MATCH_LIST_REQUEST, getMatchList);
+  console.log('match');
+  yield takeLatest(matchActions.GET_MATCH_LIST_REQUEST, getMatchList);
 }
 
 const matchSagas = [fork(watchMatchListRequest)];

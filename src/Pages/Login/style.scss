@@ -1,94 +1,94 @@
-.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
     display: none;
 }
-.form{
+.form {
     width: 450px;
     padding: 25px 25px;
     margin: 0 auto;
     position: relative;
-    &__container{
+    &__container {
         border-radius: 12px;
         overflow: hidden;
     }
-    &__title{
-       font-weight: bold;
-       position: relative;
-       margin-bottom: 0;
-       color: white;
+    &__title {
+        font-weight: bold;
+        position: relative;
+        margin-bottom: 0;
+        color: white;
     }
 
-    &__sub-title{
+    &__sub-title {
         color: silver;
         position: relative;
         margin-bottom: 30px;
-        &--login{
+        &--login {
             color: silver;
             margin-bottom: 0;
         }
     }
-    &__item--title{
+    &__item--title {
         color: #fafafa;
         font-size: 16px;
         margin-bottom: 0;
     }
-    &__link--recovery{
+    &__link--recovery {
         color: gray;
         margin-bottom: 30px;
-        &:hover{
+        &:hover {
             color: silver;
         }
     }
-    .ant-form-item{
+    .ant-form-item {
         margin-bottom: 10px;
     }
-    .ant-divider-horizontal.ant-divider-with-text::before, .ant-divider-horizontal.ant-divider-with-text::after{
+    .ant-divider-horizontal.ant-divider-with-text::before,
+    .ant-divider-horizontal.ant-divider-with-text::after {
         border-top-color: silver;
     }
-    &__button{
+    &__button {
         height: 40px;
         width: 96%;
         border: 0;
         border-radius: 4px;
         margin-top: 10px;
-        &__container{
+        &__container {
             width: 100%;
         }
-        &--login{
+        &--login {
             width: 100%;
         }
-        &--register{
+        &--register {
             width: 100%;
             margin-top: 10px;
         }
-        &--facebook{
+        &--facebook {
             background-color: #3b5998;
         }
-        &--google{
-            background-color: #DB4437;
+        &--google {
+            background-color: #db4437;
             float: right;
-            span{
+            span {
                 color: black;
             }
         }
-        i{
+        i {
             margin-right: 10px;
         }
     }
-    
 }
-.login-form{
+.login-form {
     transition: 0.6s;
     animation: toRight 0.6s;
     background-color: black;
-    .ant-input-affix-wrapper > input.ant-input{
+    .ant-input-affix-wrapper > input.ant-input {
         background-color: #434343;
     }
-    .ant-input{
+    .ant-input {
         color: white;
     }
 }
 
-.card-form{
+.card-form {
     padding: 25px 15px;
     padding-bottom: 0;
     margin: 0 auto;
@@ -100,35 +100,35 @@
     overflow: hidden;
     transition: 0.5s;
     width: 450px;
-    &--left{
+    &--left {
         animation: toLeft 0.5s;
     }
-    &--right{
+    &--right {
         animation: toRight 0.5s;
     }
-    &__title{
+    &__title {
         font-weight: bold;
         color: #eee;
         margin: 16px 24px;
         font-size: 1.15rem;
     }
-    &__sub-title{
+    &__sub-title {
         font-size: 1.4rem;
     }
-    &__text{
+    &__text {
         color: black;
     }
-    &__image--bottom{
+    &__image--bottom {
         height: auto;
         width: 100%;
         transform: translateY(33px);
     }
-    &__image--top{
+    &__image--top {
         height: 70px;
         margin: 0 24px;
         display: block;
     }
-    &__button{
+    &__button {
         border: 0;
         height: 40px;
         border-radius: 4px;
@@ -137,58 +137,66 @@
         color: $primary-light;
         font-weight: bold;
         margin: 0 24px;
-        &--login{
+        &--login {
             margin-top: 20px;
             color: $primary-light;
             font-weight: bold;
         }
     }
 }
-.register-form{
+.register-form {
     padding: 25px 15px;
     padding-bottom: 0;
     background-color: #fff;
     transition: 0.5s;
     animation: toLeft 0.5s;
-    &__title{
+    &__title {
         font-weight: bold;
         margin-bottom: 20px;
         color: #000;
     }
-    .ant-input{
+    .ant-input {
         background-color: #eee;
         border: 0;
         outline: 0;
     }
-    .ant-input-affix-wrapper-lg{
+    .ant-input-affix-wrapper-lg {
         background-color: #eee;
         border-style: none;
     }
 }
-@include tablet{
-    .form{
+@include tablet {
+    .form {
         width: 100%;
     }
-    .login-form{
+    .login-form {
         order: 1;
     }
-    .form__container{
+    .form__container {
         flex-wrap: wrap;
         padding-top: 140px;
     }
-    .card-form{
+    .card-form {
         order: 2;
         padding-bottom: 25px;
-        &__image--bottom{
+        &__image--bottom {
             display: none;
         }
     }
 }
-@keyframes toLeft{
-    from {transform: translateX(100%)}
-    to {transform: translateX(0)}
+@keyframes toLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
-@keyframes toRight{
-    from {transform: translateX(-100%)}
-    to {transform: translateX(0)}
+@keyframes toRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
